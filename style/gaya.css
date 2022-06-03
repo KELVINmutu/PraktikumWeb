@@ -1,0 +1,400 @@
+@import url(about.css);
+@import url(list.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 4rem 9%;
+}
+
+
+/*Navbar Mulai*/
+
+nav .logo {
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-left: 100px;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background: #4700D8;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+}
+
+nav ul {
+    float: right;
+    margin-right: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    font-size: 20px;
+    background: #4700D8;
+    transition: .5s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #23dbdb;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 80px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+}
+
+nav ul ul li {
+    width: 100px;
+    display: list-item;
+    position: relative;
+    border-top: none;
+}
+
+nav ul ul li a {
+    line-height: 30px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+
+/*Navbar Selesai*/
+
+
+/*Caroussel Mulai*/
+
+.carousel {
+    margin: 0 auto;
+    margin-top: 9rem;
+    margin-bottom: 20rem;
+}
+
+.slidershow {
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.middle {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background: #fff;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -20%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -40%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -60%;
+}
+
+#r5:checked~.s1 {
+    margin-left: -80%;
+}
+
+
+/*Caroussel Selesai*/
+
+
+/*Container Konten Mulai*/
+
+#konten {
+    margin: 0 auto;
+    margin-top: 25rem;
+    margin-bottom: 20rem;
+    padding: 25;
+}
+
+.promo {
+    background: #4700D8;
+    margin-bottom: 20px;
+    margin-left: 130px;
+    height: 70px;
+    width: 1000px;
+    text-align: center;
+}
+
+.promo h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+
+.container-konten {
+    height: auto;
+}
+
+.container-konten .row {
+    display: flex;
+}
+
+.row .kiri {
+    margin: 10px 20px 10px 70px;
+    max-width: 800px;
+}
+
+.row .kiri .hot-konten h3 {
+    color: rgb(68, 66, 66);
+    font-weight: 10;
+    margin-bottom: 20px;
+}
+
+.row .kiri .hot-konten h1 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.row .kiri .hot-konten img {
+    width: 800px;
+}
+
+.row .kiri .hot-konten p {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.row .kiri .identitas {
+    margin-top: 10px;
+}
+
+.row .kiri .sub-konten {
+    margin: 20px 0 0 0;
+    display: flex;
+    width: 800px;
+}
+
+.row .kiri .box {
+    width: 380px;
+    margin: 0 30px 10px 0;
+}
+
+.row .kiri .box img {
+    width: 380px;
+}
+
+.row .kiri .box p {
+    letter-spacing: 1px;
+    color: grey;
+    margin-top: 8px;
+}
+
+.row .kanan {
+    margin-top: 90px;
+}
+
+.row .kanan .box-nav {
+    display: block;
+    border: 0.2rem solid #111;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.row .kanan .box-nav a {
+    color: black;
+}
+
+.kanan .box-nav .heading {
+    background: black;
+    text-align: center;
+}
+
+.kanan .box-nav h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.row .kanan .services {
+    padding-left: 50px;
+}
+
+.row .kanan ul li {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.row .kanan .sosmed ul {
+    display: flex;
+}
+
+.row .kanan .sosmed ul li {
+    font-size: 30px;
+    margin-left: 35px;
+    color: black;
+}
+
+
+/*Container Konten Selesai*/
+
+
+/*Pagination Mulai*/
+
+.pagination {
+    display: inline-block;
+    position: relative;
+    left: 200px;
+    top: 20px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+
+/*Pagination Selesai*/
+:root {
+    --main-color: #8e44ad;
+    --black: #222;
+    --white: #fff;
+    --light-black: #777;
+    --light-white: #fff9;
+    --dark-bg: rgba(0, 0, 0, .7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+/*Footer Mulai*/
+.footer {
+    background: url(../img/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .box-container .box h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a {
+    color: var(--light-white);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+}
+
+.footer .box-container .box a i {
+    color: var(--main-color);
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.footer .credit span {
+    color: var(--main-color);
+}
+
+/*Footer Selesai*/
